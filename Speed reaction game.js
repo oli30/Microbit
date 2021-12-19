@@ -62,16 +62,11 @@ basic.pause(time)
             basic.showString("A:" + scoreA + "B:" + scoreB)
         }
         else if (input.buttonIsPressed(Button.AB)) {
-            if (scoreA > scoreB) {
-                basic.showString("Overall A wins with " + scoreA + 'points')
-            }
-            else if (scoreA > scoreB) {
-                basic.showString("Overall B wins with " + scoreB + 'points')
-            }
-            else {
-                basic.showString("Draw")
-            }
+            basic.showString("Draw!")
             buttonWasPressed = "true"
+            scoreB += 1
+            getReward()
+            basic.showString("A:" + scoreA + "B:" + scoreB)
         }   
     }
 })
